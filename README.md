@@ -1,6 +1,6 @@
 # Review Truth Shield
 
-# Build a Complete ReviewShield Application
+# Build a Complete ReviewShield Application 
 
 Act as a senior full-stack software developer and UI/UX designer. Build a complete, professional application called **ReviewShield** — a review analysis system that detects potentially fake, suspicious, and genuine customer reviews.
 
