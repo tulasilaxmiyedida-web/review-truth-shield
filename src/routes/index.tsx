@@ -166,7 +166,7 @@ function ReviewShieldApp() {
 
   function selectTextColumn(column: string) {
     setTextColumn(column);
-    setWorkspace((current) => ({ ...current, rows: current.rows.map((row) => ({ ...row, text: row.source[column] ?? "", category: undefined, risk: undefined, reason: undefined, analyzedAt: undefined })) }));
+    setWorkspace((current) => ({ ...current, rows: current.rows.map(({ category, risk, reason, analyzedAt, ...row }) => ({ ...row, text: row.source[column] ?? "" })) }));
   }
 
   function runAnalysis() {

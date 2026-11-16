@@ -99,7 +99,7 @@ export function classifyReviews(rows: ReviewRow[]): ReviewRow[] {
     const duplicate = normalizedCounts.get(normalized) !== undefined && (normalizedCounts.get(normalized) ?? 0) > 1;
     const promoCount = promoTerms.filter((term) => normalized.includes(term)).length;
     const punctuation = (row.text.match(/[!?]/g) ?? []).length;
-    const rating = Number(row.source.rating ?? row.source.stars ?? "");
+    const rating = Number(row.source["rating"] ?? row.source["stars"] ?? "");
     const reasons: string[] = [];
     let risk = 5;
 
